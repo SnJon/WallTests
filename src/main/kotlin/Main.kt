@@ -14,8 +14,8 @@ data class Post(
 object WallService {
 
     private var posts = emptyArray<Post>()
-    var postId = 0
-    private set
+    private var postId = 0
+
 
     fun clear() {
         posts = emptyArray()

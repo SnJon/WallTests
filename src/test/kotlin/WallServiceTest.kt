@@ -7,8 +7,7 @@ class WallServiceTest {
     @Test
     fun add() {
         val testPost = Post(0, 22102022, 11, "Test post", likes = 0)
-        WallService.add(testPost)
-        val result = WallService.postId
+        val (result) = WallService.add(testPost)
         assertEquals(1, result)
     }
 
