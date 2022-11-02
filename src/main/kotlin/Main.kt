@@ -45,8 +45,6 @@ data class NoteAttachment(val note: Note) : Attachment {
     override val type = "note"
 }
 
-
-
 data class Post(
     var id: Int?,
     val ownerId: Int,
@@ -128,7 +126,7 @@ fun main() {
     WallService.update(firstPost)
     WallService.printPosts()
 
-    val note = Note(1,11, "Note", "Simple text", 1)
+    val note = Note(1, 11, "Note", "Simple text", 1)
     val noteAttachment = NoteAttachment(note)
 
     val audio = Audio(1, 11, "Audio", "Simple audio", 152, 35)
@@ -140,5 +138,4 @@ fun main() {
 
     val postWithAttachments = Post(0, 44, 444, 5325325, "Test Post", 3, attachments = attachments)
     println(postWithAttachments)
-
 }
