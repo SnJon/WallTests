@@ -6,7 +6,7 @@ class WallServiceTest {
 
     @Test
     fun add() {
-        val testPost = Post(0, 22102022, 11, 25102022, "Test Post", 0)
+        val testPost = Post(0, 22102022, 11, 29102022, "Test post", 5)
         val (result) = WallService.add(testPost)
         assertEquals(1, result)
     }
@@ -18,7 +18,7 @@ class WallServiceTest {
 
     @Test
     fun updateExisting() {
-        val testPost = Post(0, 22102022, 11, 25102022, "Test Post", 0)
+        val testPost = Post(0, 22102022, 11, 29102022, "Test post", 5)
         WallService.add(testPost)
         val result = WallService.update(testPost)
         assertEquals(true, result)
@@ -31,7 +31,7 @@ class WallServiceTest {
 
     @Test
     fun updateNonexistent() {
-        val testPost = Post(0, 22102022, 11, 25102022, "Test Post", 0)
+        val testPost = Post(0, 22102022, 11, 29102022, "Test post", 5)
         val result = WallService.update(testPost)
         assertEquals(false, result)
     }
